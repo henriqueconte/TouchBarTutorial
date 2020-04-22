@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80AC16A42450BA6D002D1AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */; };
+		80AC16A62450BA6D002D1AC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A52450BA6D002D1AC3 /* ViewController.swift */; };
+		80AC16A82450BA71002D1AC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AC16A72450BA71002D1AC3 /* Assets.xcassets */; };
+		80AC16AB2450BA71002D1AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AC16A92450BA71002D1AC3 /* Main.storyboard */; };
+		80AC16B62450C01B002D1AC3 /* TouchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16B52450C01B002D1AC3 /* TouchBarView.swift */; };
+		80AC16B92450D364002D1AC3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16B72450CFF0002D1AC3 /* GameScene.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		80AC16A02450BA6D002D1AC3 /* SpriteKitTouchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitTouchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80AC16A52450BA6D002D1AC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80AC16A72450BA71002D1AC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80AC16AA2450BA71002D1AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80AC16AC2450BA71002D1AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80AC16AD2450BA71002D1AC3 /* SpriteKitTouchBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpriteKitTouchBar.entitlements; sourceTree = "<group>"; };
+		80AC16B52450C01B002D1AC3 /* TouchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarView.swift; sourceTree = "<group>"; };
+		80AC16B72450CFF0002D1AC3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80AC169D2450BA6D002D1AC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80AC16972450BA6D002D1AC3 = {
+			isa = PBXGroup;
+			children = (
+				80AC16A22450BA6D002D1AC3 /* SpriteKitTouchBar */,
+				80AC16A12450BA6D002D1AC3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80AC16A12450BA6D002D1AC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80AC16A02450BA6D002D1AC3 /* SpriteKitTouchBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80AC16A22450BA6D002D1AC3 /* SpriteKitTouchBar */ = {
+			isa = PBXGroup;
+			children = (
+				80AC16B42450C015002D1AC3 /* Mac */,
+				80AC16B32450C011002D1AC3 /* TouchBar */,
+				80AC16A72450BA71002D1AC3 /* Assets.xcassets */,
+				80AC16A92450BA71002D1AC3 /* Main.storyboard */,
+				80AC16AC2450BA71002D1AC3 /* Info.plist */,
+				80AC16AD2450BA71002D1AC3 /* SpriteKitTouchBar.entitlements */,
+			);
+			path = SpriteKitTouchBar;
+			sourceTree = "<group>";
+		};
+		80AC16B32450C011002D1AC3 /* TouchBar */ = {
+			isa = PBXGroup;
+			children = (
+				80AC16B52450C01B002D1AC3 /* TouchBarView.swift */,
+			);
+			path = TouchBar;
+			sourceTree = "<group>";
+		};
+		80AC16B42450C015002D1AC3 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				80AC16A52450BA6D002D1AC3 /* ViewController.swift */,
+				80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */,
+				80AC16B72450CFF0002D1AC3 /* GameScene.swift */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80AC169F2450BA6D002D1AC3 /* SpriteKitTouchBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80AC16B02450BA71002D1AC3 /* Build configuration list for PBXNativeTarget "SpriteKitTouchBar" */;
+			buildPhases = (
+				80AC169C2450BA6D002D1AC3 /* Sources */,
+				80AC169D2450BA6D002D1AC3 /* Frameworks */,
+				80AC169E2450BA6D002D1AC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpriteKitTouchBar;
+			productName = SpriteKitTouchBar;
+			productReference = 80AC16A02450BA6D002D1AC3 /* SpriteKitTouchBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80AC16982450BA6D002D1AC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Henrique Figueiredo Conte";
+				TargetAttributes = {
+					80AC169F2450BA6D002D1AC3 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 80AC169B2450BA6D002D1AC3 /* Build configuration list for PBXProject "SpriteKitTouchBar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80AC16972450BA6D002D1AC3;
+			productRefGroup = 80AC16A12450BA6D002D1AC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80AC169F2450BA6D002D1AC3 /* SpriteKitTouchBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80AC169E2450BA6D002D1AC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80AC16A82450BA71002D1AC3 /* Assets.xcassets in Resources */,
+				80AC16AB2450BA71002D1AC3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80AC169C2450BA6D002D1AC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80AC16B62450C01B002D1AC3 /* TouchBarView.swift in Sources */,
+				80AC16A62450BA6D002D1AC3 /* ViewController.swift in Sources */,
+				80AC16B92450D364002D1AC3 /* GameScene.swift in Sources */,
+				80AC16A42450BA6D002D1AC3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		80AC16A92450BA71002D1AC3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80AC16AA2450BA71002D1AC3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80AC16AE2450BA71002D1AC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80AC16AF2450BA71002D1AC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		80AC16B12450BA71002D1AC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SpriteKitTouchBar/SpriteKitTouchBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4NP5AK64M5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SpriteKitTouchBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = henriqueConte.SpriteKitTouchBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		80AC16B22450BA71002D1AC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SpriteKitTouchBar/SpriteKitTouchBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4NP5AK64M5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SpriteKitTouchBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = henriqueConte.SpriteKitTouchBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80AC169B2450BA6D002D1AC3 /* Build configuration list for PBXProject "SpriteKitTouchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80AC16AE2450BA71002D1AC3 /* Debug */,
+				80AC16AF2450BA71002D1AC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80AC16B02450BA71002D1AC3 /* Build configuration list for PBXNativeTarget "SpriteKitTouchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80AC16B12450BA71002D1AC3 /* Debug */,
+				80AC16B22450BA71002D1AC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80AC16982450BA6D002D1AC3 /* Project object */;
+}
