@@ -14,6 +14,8 @@
 		80AC16B62450C01B002D1AC3 /* TouchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16B52450C01B002D1AC3 /* TouchBarView.swift */; };
 		80AC16B92450D364002D1AC3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16B72450CFF0002D1AC3 /* GameScene.swift */; };
 		80DFBD732451FE0B000D52AA /* Game.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80DFBD722451FE0B000D52AA /* Game.sks */; };
+		80DFBD7624520DF1000D52AA /* KeyIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DFBD7524520DF1000D52AA /* KeyIdentifiers.swift */; };
+		80DFBD7824521237000D52AA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DFBD7724521237000D52AA /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		80AC16B52450C01B002D1AC3 /* TouchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarView.swift; sourceTree = "<group>"; };
 		80AC16B72450CFF0002D1AC3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		80DFBD722451FE0B000D52AA /* Game.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Game.sks; sourceTree = "<group>"; };
+		80DFBD7524520DF1000D52AA /* KeyIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyIdentifiers.swift; sourceTree = "<group>"; };
+		80DFBD7724521237000D52AA /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 		80AC16A22450BA6D002D1AC3 /* SpriteKitTouchBar */ = {
 			isa = PBXGroup;
 			children = (
+				80DFBD7424520DE6000D52AA /* Support */,
 				80AC16B42450C015002D1AC3 /* Mac */,
 				80AC16B32450C011002D1AC3 /* TouchBar */,
 				80AC16A72450BA71002D1AC3 /* Assets.xcassets */,
@@ -73,7 +78,9 @@
 		80AC16B32450C011002D1AC3 /* TouchBar */ = {
 			isa = PBXGroup;
 			children = (
+				80AC16B72450CFF0002D1AC3 /* GameScene.swift */,
 				80AC16B52450C01B002D1AC3 /* TouchBarView.swift */,
+				80DFBD7724521237000D52AA /* Player.swift */,
 			);
 			path = TouchBar;
 			sourceTree = "<group>";
@@ -83,9 +90,16 @@
 			children = (
 				80AC16A52450BA6D002D1AC3 /* MacViewController.swift */,
 				80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */,
-				80AC16B72450CFF0002D1AC3 /* GameScene.swift */,
 			);
 			path = Mac;
+			sourceTree = "<group>";
+		};
+		80DFBD7424520DE6000D52AA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				80DFBD7524520DF1000D52AA /* KeyIdentifiers.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				80AC16B62450C01B002D1AC3 /* TouchBarView.swift in Sources */,
+				80DFBD7624520DF1000D52AA /* KeyIdentifiers.swift in Sources */,
 				80AC16A62450BA6D002D1AC3 /* MacViewController.swift in Sources */,
 				80AC16B92450D364002D1AC3 /* GameScene.swift in Sources */,
+				80DFBD7824521237000D52AA /* Player.swift in Sources */,
 				80AC16A42450BA6D002D1AC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
