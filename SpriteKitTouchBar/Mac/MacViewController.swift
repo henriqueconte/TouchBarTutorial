@@ -123,7 +123,7 @@ import GameplayKit
 //    
 //}
 
-class ViewController: NSViewController {
+class MacViewController: NSViewController {
 
     @IBOutlet var skView: SKView!
     
@@ -131,20 +131,6 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let view = self.skView {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                gameScene = scene as? GameScene
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-        }
     
     }
     
@@ -158,36 +144,36 @@ class ViewController: NSViewController {
        // gameScene?.gameState = .new
     }
     
-    @available(OSX 10.12.2, *)
-    override func makeTouchBar() -> NSTouchBar? {
-        let touchBar = NSTouchBar()
-        touchBar.delegate = self
-        touchBar.customizationIdentifier = .touchBar
-        touchBar.defaultItemIdentifiers = [.touchEvent]
-        touchBar.customizationAllowedItemIdentifiers = [.touchEvent]
-        return touchBar
-    }
+//    @available(OSX 10.12.2, *)
+//    override func makeTouchBar() -> NSTouchBar? {
+//        let touchBar = NSTouchBar()
+//        touchBar.delegate = self
+//        touchBar.customizationIdentifier = .touchBar
+//        touchBar.defaultItemIdentifiers = [.touchEvent]
+//        touchBar.customizationAllowedItemIdentifiers = [.touchEvent]
+//        return touchBar
+//    }
     
 }
 
-@available(OSX 10.12.2, *)
-extension ViewController: NSTouchBarDelegate {
-    
-    func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
-        let touchBarView = TouchBarView()
-        touchBarView.wantsLayer = true
-        touchBarView.layer?.backgroundColor = NSColor.clear.cgColor
-        touchBarView.allowedTouchTypes = .direct
-        
-        //touchBarView.delegate = gameScene
-        
-        let custom = NSCustomTouchBarItem(identifier: identifier)
-        custom.view = touchBarView
-        
-        return custom
-    }
-    
-}
+//@available(OSX 10.12.2, *)
+//extension MacViewController: NSTouchBarDelegate {
+//
+////    func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
+////        let touchBarView = TouchBarView()
+////        touchBarView.wantsLayer = true
+////        touchBarView.layer?.backgroundColor = NSColor.clear.cgColor
+////        touchBarView.allowedTouchTypes = .direct
+////
+////        //touchBarView.delegate = gameScene
+////
+////        let custom = NSCustomTouchBarItem(identifier: identifier)
+////        custom.view = touchBarView
+////
+////        return custom
+////    }
+//
+//}
 
 @available(OSX 10.12.2, *)
 fileprivate extension NSTouchBar.CustomizationIdentifier {

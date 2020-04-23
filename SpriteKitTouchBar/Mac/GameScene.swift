@@ -11,18 +11,37 @@ import SpriteKit
 
 
 public class GameScene: SKScene {
-    func didMoveTo(_ locationX: Double) -> Bool {
-        return true
+    
+    var playerNode: SKLabelNode?
+    var backgroundNode: SKSpriteNode?
+    
+    var viewWidth: CGFloat {
+        return view?.bounds.width ?? 0
     }
     
+    var viewHeight: CGFloat {
+        return view?.bounds.height ?? 0
+    }
     
     public override func didMove(to view: SKView) {
-        let node = SKSpriteNode()
-        node.color = NSColor.red
-        node.position = CGPoint(x: 10, y: 5)
-        node.size = CGSize(width: 10, height: 10)
+        setBackground()
+        setPlayer()
+    }
+    
+    func setBackground() {
+        backgroundNode = SKSpriteNode(texture: SKTexture(imageNamed: "spaceBackground"), size: CGSize(width: self.view?.bounds.width ?? 0, height: self.view?.bounds.height ?? 0))
+        backgroundNode?.zPosition = 0
+        backgroundNode?.anchorPoint = CGPoint(x: 0, y: 0)
         
-        self.addChild(node)
+        addChild(backgroundNode!)
+    }
+    
+    func setPlayer() {
+        playerNode = SKLabelNode(text: "🚀")
+        playerNode?.position = CGPoint(x: viewWidth * 0.05, y: viewHeight / 3)
+        playerNode?.zRotation = 5.5
+        playerNode?.fontSize = 17
         
+        addChild(playerNode!)
     }
 }

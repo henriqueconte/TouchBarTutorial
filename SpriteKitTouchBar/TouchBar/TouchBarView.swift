@@ -8,34 +8,40 @@
 
 import Cocoa
 import Foundation
+import SpriteKit
 
 
 @available(OSX 10.12.2, *)
-class TouchBarView: NSView {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//    }
-    private let kPaddleWidth    = 100.0
-    private let kPaddleHeight   = 30.0
+class TouchBarView: NSViewController {
+
+    private lazy var gameView: SKView = {
+        let v = SKView(frame: self.view.bounds)
+        v.autoresizingMask = [.width, .height]
+        
+        return v
+    }()
     
-    var touchBarPaddle: NSView?
-   // weak var delegate: TouchBarViewDelegate? = nil
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-        if touchBarPaddle == nil {
-            touchBarPaddle = NSView(frame: NSRect(x: Double(frame.width / 2) - kPaddleWidth / 2,
-                                                  y: 0,
-                                                  width: kPaddleWidth,
-                                                  height: kPaddleHeight))
-            touchBarPaddle?.wantsLayer = true   // Necessary
-            touchBarPaddle?.layer?.cornerRadius = 15.0
-            touchBarPaddle?.layer?.masksToBounds = true
-            touchBarPaddle?.layer?.backgroundColor = NSColor.blue.cgColor
-            
-            addSubview(touchBarPaddle!)
+    override func loadView() {
+        view = NSView()
+        view.addSubview(gameView)
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        if gameView.scene == nil {
+            showGameScene()
         }
     }
+    
+    func showGameScene() {
+        let scene = SKScene(fileNamed: "Game") as? GameScene
+        scene!.scaleMode = .aspectFill
+        gameView.presentScene(scene)
+    }
+    
 }

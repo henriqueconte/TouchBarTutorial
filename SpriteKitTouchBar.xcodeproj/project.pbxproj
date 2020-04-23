@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		80AC16A42450BA6D002D1AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */; };
-		80AC16A62450BA6D002D1AC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A52450BA6D002D1AC3 /* ViewController.swift */; };
+		80AC16A62450BA6D002D1AC3 /* MacViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A52450BA6D002D1AC3 /* MacViewController.swift */; };
 		80AC16A82450BA71002D1AC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AC16A72450BA71002D1AC3 /* Assets.xcassets */; };
 		80AC16AB2450BA71002D1AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AC16A92450BA71002D1AC3 /* Main.storyboard */; };
 		80AC16B62450C01B002D1AC3 /* TouchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16B52450C01B002D1AC3 /* TouchBarView.swift */; };
 		80AC16B92450D364002D1AC3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16B72450CFF0002D1AC3 /* GameScene.swift */; };
+		80DFBD732451FE0B000D52AA /* Game.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80DFBD722451FE0B000D52AA /* Game.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		80AC16A02450BA6D002D1AC3 /* SpriteKitTouchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitTouchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		80AC16A52450BA6D002D1AC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80AC16A52450BA6D002D1AC3 /* MacViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacViewController.swift; sourceTree = "<group>"; };
 		80AC16A72450BA71002D1AC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80AC16AA2450BA71002D1AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80AC16AC2450BA71002D1AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80AC16AD2450BA71002D1AC3 /* SpriteKitTouchBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpriteKitTouchBar.entitlements; sourceTree = "<group>"; };
 		80AC16B52450C01B002D1AC3 /* TouchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarView.swift; sourceTree = "<group>"; };
 		80AC16B72450CFF0002D1AC3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		80DFBD722451FE0B000D52AA /* Game.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Game.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				80AC16A72450BA71002D1AC3 /* Assets.xcassets */,
 				80AC16A92450BA71002D1AC3 /* Main.storyboard */,
 				80AC16AC2450BA71002D1AC3 /* Info.plist */,
+				80DFBD722451FE0B000D52AA /* Game.sks */,
 				80AC16AD2450BA71002D1AC3 /* SpriteKitTouchBar.entitlements */,
 			);
 			path = SpriteKitTouchBar;
@@ -78,7 +81,7 @@
 		80AC16B42450C015002D1AC3 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				80AC16A52450BA6D002D1AC3 /* ViewController.swift */,
+				80AC16A52450BA6D002D1AC3 /* MacViewController.swift */,
 				80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */,
 				80AC16B72450CFF0002D1AC3 /* GameScene.swift */,
 			);
@@ -143,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DFBD732451FE0B000D52AA /* Game.sks in Resources */,
 				80AC16A82450BA71002D1AC3 /* Assets.xcassets in Resources */,
 				80AC16AB2450BA71002D1AC3 /* Main.storyboard in Resources */,
 			);
@@ -156,7 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80AC16B62450C01B002D1AC3 /* TouchBarView.swift in Sources */,
-				80AC16A62450BA6D002D1AC3 /* ViewController.swift in Sources */,
+				80AC16A62450BA6D002D1AC3 /* MacViewController.swift in Sources */,
 				80AC16B92450D364002D1AC3 /* GameScene.swift in Sources */,
 				80AC16A42450BA6D002D1AC3 /* AppDelegate.swift in Sources */,
 			);
