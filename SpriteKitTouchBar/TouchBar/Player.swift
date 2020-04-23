@@ -17,18 +17,32 @@ class Player: SKLabelNode {
         self.text = text
         self.fontSize = 17
         self.zRotation = 5.5
+        self.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
     }
     
     func moveUp() {
-        if self.position.y < 24 {
-            setNewPosition(newPoint: CGPoint(x: self.position.x, y: self.position.y + 2), duration: 0.1)
+        if self.position.y < 26 {
+            setNewPosition(newPoint: CGPoint(x: self.position.x, y: self.position.y + 5), duration: 0.1)
         }
     }
     
     func moveDown() {
-        if self.position.y > -3 {
-            setNewPosition(newPoint: CGPoint(x: self.position.x, y: self.position.y - 2), duration: 0.1)
+        if self.position.y > 2 {
+            setNewPosition(newPoint: CGPoint(x: self.position.x, y: self.position.y - 5), duration: 0.1)
         }
+    }
+    
+    func shoot() -> SKLabelNode {
+        let shootNode = SKLabelNode(text: "💣")
+        shootNode.fontSize = 8
+        shootNode.position = CGPoint(x: self.position.x + 5, y: self.position.y)
+        shootNode.zRotation = -5.5
+        
+        let spinningAction = SKAction.repeatForever(SKAction.rotate(byAngle: .pi * 2, duration: 0.5))
+        
+        shootNode.run(spinningAction)
+        
+        return shootNode
     }
     
     private func setNewPosition(newPoint: CGPoint, duration: TimeInterval) {

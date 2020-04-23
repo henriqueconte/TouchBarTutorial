@@ -55,29 +55,21 @@ public class GameScene: SKScene {
             case KeyIdentifiers.downArrow.rawValue:
                 self.playerNode?.moveDown()
 
-//            case KeyIdentifiers.space.rawValue:
-//
-//                if self.playerLightNodes.isEmpty == false {
-//
-//                    if self.playerLightNodes.count == 1 {
-//
-//                        self.playerLightNodes.first?.removeFromParent()
-//                        self.playerLightNodes.first?.falloff = 1.0
-//                        self.addChild(self.playerLightNodes.first ?? SKNode())
-//
-//                        self.macScene?.backgroundNode?.color = NSColor(red: 255/255, green: 1/255, blue: 100/255, alpha: 0.8)
-//                    }
-//                    else {
-//                        self.playerLightNodes.last?.removeFromParent()
-//                        self.playerLightNodes.removeLast()
-//                        self.removedLightNodes += 1
-//                    }
-//
-//                }
+            case KeyIdentifiers.space.rawValue:
+                let projectile = self.playerNode?.shoot()
+                self.addChild(projectile!)
+                
+                let moveAction = SKAction.move(to: CGPoint(x: 700, y: projectile?.position.y ?? 0), duration: 1)
+        
+                projectile?.run(moveAction) {
+                    projectile?.removeFromParent()
+                }
+                
             default:
                 return event
             }
             return event
         }
     }
+    
 }
