@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80175164245328EA00D8C85E /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80175163245328EA00D8C85E /* StartScene.swift */; };
+		8017516924533CBA00D8C85E /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8017516824533CBA00D8C85E /* StartScene.sks */; };
 		80AC16A42450BA6D002D1AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */; };
 		80AC16A62450BA6D002D1AC3 /* MacViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A52450BA6D002D1AC3 /* MacViewController.swift */; };
 		80AC16A82450BA71002D1AC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AC16A72450BA71002D1AC3 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80175163245328EA00D8C85E /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		8017516824533CBA00D8C85E /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		80AC16A02450BA6D002D1AC3 /* SpriteKitTouchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitTouchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80AC16A52450BA6D002D1AC3 /* MacViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +52,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		801751652453299A00D8C85E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80DFBD7724521237000D52AA /* Player.swift */,
+				80DFBD7A245231B2000D52AA /* Enemy.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		801751662453299F00D8C85E /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				80AC16B72450CFF0002D1AC3 /* GameScene.swift */,
+				80175163245328EA00D8C85E /* StartScene.swift */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
+		80175167245329AB00D8C85E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80AC16B52450C01B002D1AC3 /* TouchBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		80AC16972450BA6D002D1AC3 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +104,7 @@
 				80AC16A92450BA71002D1AC3 /* Main.storyboard */,
 				80AC16AC2450BA71002D1AC3 /* Info.plist */,
 				80DFBD7C24528BC8000D52AA /* Explosion.sks */,
+				8017516824533CBA00D8C85E /* StartScene.sks */,
 				80DFBD722451FE0B000D52AA /* Game.sks */,
 				80AC16AD2450BA71002D1AC3 /* SpriteKitTouchBar.entitlements */,
 			);
@@ -83,10 +114,9 @@
 		80AC16B32450C011002D1AC3 /* TouchBar */ = {
 			isa = PBXGroup;
 			children = (
-				80AC16B72450CFF0002D1AC3 /* GameScene.swift */,
-				80AC16B52450C01B002D1AC3 /* TouchBarView.swift */,
-				80DFBD7724521237000D52AA /* Player.swift */,
-				80DFBD7A245231B2000D52AA /* Enemy.swift */,
+				80175167245329AB00D8C85E /* View */,
+				801751662453299F00D8C85E /* SpriteKit */,
+				801751652453299A00D8C85E /* Model */,
 			);
 			path = TouchBar;
 			sourceTree = "<group>";
@@ -169,6 +199,7 @@
 				80DFBD732451FE0B000D52AA /* Game.sks in Resources */,
 				80DFBD7D24528BC8000D52AA /* Explosion.sks in Resources */,
 				80AC16A82450BA71002D1AC3 /* Assets.xcassets in Resources */,
+				8017516924533CBA00D8C85E /* StartScene.sks in Resources */,
 				80AC16AB2450BA71002D1AC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +218,7 @@
 				80AC16B92450D364002D1AC3 /* GameScene.swift in Sources */,
 				80DFBD7824521237000D52AA /* Player.swift in Sources */,
 				80AC16A42450BA6D002D1AC3 /* AppDelegate.swift in Sources */,
+				80175164245328EA00D8C85E /* StartScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

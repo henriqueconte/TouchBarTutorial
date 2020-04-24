@@ -34,12 +34,12 @@ class TouchBarView: NSViewController {
         super.viewDidAppear()
         
         if gameView.scene == nil {
-            showGameScene()
+            showStartScene()
         }
     }
     
-    func showGameScene() {
-        let scene = SKScene(fileNamed: "Game") as? GameScene
+    func showStartScene() {
+        let scene = SKScene(fileNamed: "StartScene") as? StartScene
         scene!.scaleMode = .aspectFill
         gameView.presentScene(scene)
     }

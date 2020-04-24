@@ -15,7 +15,7 @@ class Enemy: SKLabelNode {
     init(text: String) {
         super.init()
         self.text = text
-        self.fontSize = 13
+        self.fontSize = 11
         self.zRotation = 5.5
         self.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
         self.name = "enemy"
@@ -33,7 +33,7 @@ class Enemy: SKLabelNode {
         let explosion = SKEmitterNode(fileNamed: "Explosion")!
         addChild(explosion)
         explosion.resetSimulation()
-        explosion.particleTexture = SKTexture(imageNamed: "Bloop")
+        explosion.particleTexture = SKTexture(imageNamed: "Bloob")
         explosion.position = CGPoint(x: self.position.x, y: self.position.y)
         explosion.particleSize = CGSize(width: 10, height: 10)
         

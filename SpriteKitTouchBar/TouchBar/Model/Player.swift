@@ -12,10 +12,12 @@ import SpriteKit
 
 class Player: SKLabelNode {
     
+    var isAlive: Bool = true
+    
     init(text: String) {
         super.init()
         self.text = text
-        self.fontSize = 17
+        self.fontSize = 14
         self.zRotation = 5.5
         self.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
         self.name = "player"
@@ -23,20 +25,24 @@ class Player: SKLabelNode {
     }
     
     func moveUp() {
-        if self.position.y < 26 {
-            setNewPosition(newPoint: CGPoint(x: self.position.x, y: self.position.y + 5), duration: 0.1)
+        if isAlive {
+            if self.position.y < 26 {
+                setNewPosition(newPoint: CGPoint(x: self.position.x, y: self.position.y + 5), duration: 0.1)
+            }
         }
     }
     
     func moveDown() {
-        if self.position.y > 2 {
-            setNewPosition(newPoint: CGPoint(x: self.position.x, y: self.position.y - 5), duration: 0.1)
+        if isAlive {
+            if self.position.y > 2 {
+                setNewPosition(newPoint: CGPoint(x: self.position.x, y: self.position.y - 5), duration: 0.1)
+            }
         }
     }
     
     func shoot() -> SKLabelNode {
         let shootNode = SKLabelNode(text: "💣")
-        shootNode.fontSize = 8
+        shootNode.fontSize = 6
         shootNode.position = CGPoint(x: self.position.x + 5, y: self.position.y)
         shootNode.zRotation = -5.5
         shootNode.name = "playerBomb"
@@ -49,21 +55,24 @@ class Player: SKLabelNode {
         return shootNode
     }
     
-    func die() {
+    func die(_ completion: @escaping () -> ()) {
         self.removeAllActions()
+        isAlive = false
         
         let explosion = SKEmitterNode(fileNamed: "Explosion")!
         addChild(explosion)
         explosion.resetSimulation()
-        explosion.particleTexture = SKTexture(imageNamed: "Bloop")
+        explosion.particleTexture = SKTexture(imageNamed: "Bloob")
         explosion.position = CGPoint(x: self.position.x, y: self.position.y)
-        explosion.particleSize = CGSize(width: 10, height: 10)
+        explosion.particleSize = CGSize(width: 15, height: 15)
+        explosion.speed = 0.5
         
-        let fadeOut = SKAction.fadeOut(withDuration: 0.5)
+        let fadeOut = SKAction.fadeOut(withDuration: 1.0)
 
         self.run(fadeOut) {
             explosion.removeFromParent()
             self.removeFromParent()
+            completion()
         }
     }
     

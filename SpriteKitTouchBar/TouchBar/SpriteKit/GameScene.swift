@@ -32,12 +32,16 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        let randomTime = Double.random(in: 0.8..<2)
-        
-        if currentTime - updateTime > randomTime {
-            updateTime = currentTime
-            spawnEnemie()
+
+        if playerNode?.isAlive ?? true {
+            let randomTime = Double.random(in: 0.8..<2)
+            
+            if currentTime - updateTime > randomTime {
+                updateTime = currentTime
+                spawnEnemie()
+            }
         }
+
     }
     
     func setPhysicsWorld() {
@@ -59,6 +63,19 @@ class GameScene: SKScene {
         addChild(playerNode!)
     }
     
+    func setPlayerAttack () {
+        if playerNode?.isAlive ?? true {
+            let projectile = self.playerNode?.shoot()
+            self.addChild(projectile!)
+            
+            let moveAction = SKAction.move(to: CGPoint(x: 700, y: projectile?.position.y ?? 0), duration: 1)
+
+            projectile?.run(moveAction) {
+                projectile?.removeFromParent()
+            }
+        }
+    }
+    
     func setKeyboardEvents() {
 
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (event) -> NSEvent? in
@@ -71,14 +88,7 @@ class GameScene: SKScene {
                 self.playerNode?.moveDown()
 
             case KeyIdentifiers.space.rawValue:
-                let projectile = self.playerNode?.shoot()
-                self.addChild(projectile!)
-                
-                let moveAction = SKAction.move(to: CGPoint(x: 700, y: projectile?.position.y ?? 0), duration: 1)
-        
-                projectile?.run(moveAction) {
-                    projectile?.removeFromParent()
-                }
+                self.setPlayerAttack()
                 
             default:
                 return event
@@ -99,6 +109,20 @@ class GameScene: SKScene {
         enemy.run(moveAction) {
             enemy.removeFromParent()
         }
+    }
+    
+    func stopEnemies() {
+        for element in self.children {
+            if element.name == "enemy" {
+                element.isPaused = true
+            }
+        }
+    }
+    
+    func showStartScene() {
+        let scene = SKScene(fileNamed: "StartScene") as? StartScene
+        scene!.scaleMode = .aspectFill
+        self.view?.presentScene(scene)
     }
 }
 
@@ -123,10 +147,16 @@ extension GameScene: SKPhysicsContactDelegate {
         else if (bodyA.node?.name == "enemy" || bodyA.node?.name == "player") && (bodyB.node?.name == "enemy" || bodyB.node?.name == "player") {
             
             if let playerNode = bodyA.node as? Player {
-                playerNode.die()
+                stopEnemies()
+                playerNode.die({
+                    self.showStartScene()
+                })
             }
             else if let playerNode = bodyB.node as? Player {
-                playerNode.die()
+                stopEnemies()
+                playerNode.die({
+                    self.showStartScene()
+                })
             }
         }
     }
