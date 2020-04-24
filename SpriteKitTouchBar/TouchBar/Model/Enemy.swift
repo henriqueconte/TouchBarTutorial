@@ -15,7 +15,7 @@ class Enemy: SKLabelNode {
     init(text: String) {
         super.init()
         self.text = text
-        self.fontSize = 11
+        self.fontSize = 10
         self.zRotation = 5.5
         self.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
         self.name = "enemy"
@@ -46,7 +46,9 @@ class Enemy: SKLabelNode {
     }
     
     private func setDefaultPhysicsBody() {
-        let physicsBody = SKPhysicsBody(rectangleOf: self.frame.size)
+        let physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: self.frame.width * 0.5,
+                                                            height: self.frame.height * 0.5)
+        )
         physicsBody.affectedByGravity = false
         physicsBody.isDynamic = true
         physicsBody.contactTestBitMask = 1

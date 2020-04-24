@@ -77,7 +77,9 @@ class Player: SKLabelNode {
     }
     
     private func setDefaultPhysicsBody(from node: SKNode) {
-        let physicsBody = SKPhysicsBody(rectangleOf: node.frame.size)
+        let physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: node.frame.width * 0.5,
+                                                            height: node.frame.height * 0.5)
+        )
         physicsBody.affectedByGravity = false
         physicsBody.isDynamic = true
         physicsBody.contactTestBitMask = 1
