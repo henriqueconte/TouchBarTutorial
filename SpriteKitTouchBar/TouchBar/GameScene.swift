@@ -25,6 +25,7 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        setPhysicsWorld()
         setBackground()
         setPlayer()
         setKeyboardEvents()
@@ -37,7 +38,10 @@ class GameScene: SKScene {
             updateTime = currentTime
             spawnEnemie()
         }
-        
+    }
+    
+    func setPhysicsWorld() {
+        physicsWorld.contactDelegate = self
     }
     
     func setBackground() {
@@ -96,5 +100,34 @@ class GameScene: SKScene {
             enemy.removeFromParent()
         }
     }
+}
+
+extension GameScene: SKPhysicsContactDelegate {
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        let bodyA = contact.bodyA
+        let bodyB = contact.bodyB
+        
+        if (bodyA.node?.name == "playerBomb" || bodyA.node?.name == "enemy") && (bodyB.node?.name == "playerBomb" || bodyB.node?.name == "enemy") {
+            
+            if let enemyNode = bodyA.node as? Enemy {
+                enemyNode.die()
+                bodyB.node?.removeFromParent()
+            }
+            else if let enemyNode = bodyB.node as? Enemy {
+                enemyNode.die()
+                bodyA.node?.removeFromParent()
+            }
+        }
+        
+        else if (bodyA.node?.name == "enemy" || bodyA.node?.name == "player") && (bodyB.node?.name == "enemy" || bodyB.node?.name == "player") {
+            
+            if let playerNode = bodyA.node as? Player {
+                playerNode.die()
+            }
+            else if let playerNode = bodyB.node as? Player {
+                playerNode.die()
+            }
+        }
+    }
 }

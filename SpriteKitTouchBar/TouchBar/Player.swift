@@ -18,6 +18,8 @@ class Player: SKLabelNode {
         self.fontSize = 17
         self.zRotation = 5.5
         self.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
+        self.name = "player"
+        setDefaultPhysicsBody(from: self)
     }
     
     func moveUp() {
@@ -37,12 +39,42 @@ class Player: SKLabelNode {
         shootNode.fontSize = 8
         shootNode.position = CGPoint(x: self.position.x + 5, y: self.position.y)
         shootNode.zRotation = -5.5
+        shootNode.name = "playerBomb"
+        setDefaultPhysicsBody(from: shootNode)
         
         let spinningAction = SKAction.repeatForever(SKAction.rotate(byAngle: .pi * 2, duration: 0.5))
         
         shootNode.run(spinningAction)
         
         return shootNode
+    }
+    
+    func die() {
+        self.removeAllActions()
+        
+        let explosion = SKEmitterNode(fileNamed: "Explosion")!
+        addChild(explosion)
+        explosion.resetSimulation()
+        explosion.particleTexture = SKTexture(imageNamed: "Bloop")
+        explosion.position = CGPoint(x: self.position.x, y: self.position.y)
+        explosion.particleSize = CGSize(width: 10, height: 10)
+        
+        let fadeOut = SKAction.fadeOut(withDuration: 0.5)
+
+        self.run(fadeOut) {
+            explosion.removeFromParent()
+            self.removeFromParent()
+        }
+    }
+    
+    private func setDefaultPhysicsBody(from node: SKNode) {
+        let physicsBody = SKPhysicsBody(rectangleOf: node.frame.size)
+        physicsBody.affectedByGravity = false
+        physicsBody.isDynamic = true
+        physicsBody.contactTestBitMask = 1
+        physicsBody.collisionBitMask = 0
+        
+        node.physicsBody = physicsBody
     }
     
     private func setNewPosition(newPoint: CGPoint, duration: TimeInterval) {

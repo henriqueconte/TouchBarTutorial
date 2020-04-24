@@ -17,6 +17,7 @@
 		80DFBD7624520DF1000D52AA /* KeyIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DFBD7524520DF1000D52AA /* KeyIdentifiers.swift */; };
 		80DFBD7824521237000D52AA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DFBD7724521237000D52AA /* Player.swift */; };
 		80DFBD7B245231B2000D52AA /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DFBD7A245231B2000D52AA /* Enemy.swift */; };
+		80DFBD7D24528BC8000D52AA /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80DFBD7C24528BC8000D52AA /* Explosion.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		80DFBD7524520DF1000D52AA /* KeyIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyIdentifiers.swift; sourceTree = "<group>"; };
 		80DFBD7724521237000D52AA /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		80DFBD7A245231B2000D52AA /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		80DFBD7C24528BC8000D52AA /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				80AC16A72450BA71002D1AC3 /* Assets.xcassets */,
 				80AC16A92450BA71002D1AC3 /* Main.storyboard */,
 				80AC16AC2450BA71002D1AC3 /* Info.plist */,
+				80DFBD7C24528BC8000D52AA /* Explosion.sks */,
 				80DFBD722451FE0B000D52AA /* Game.sks */,
 				80AC16AD2450BA71002D1AC3 /* SpriteKitTouchBar.entitlements */,
 			);
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80DFBD732451FE0B000D52AA /* Game.sks in Resources */,
+				80DFBD7D24528BC8000D52AA /* Explosion.sks in Resources */,
 				80AC16A82450BA71002D1AC3 /* Assets.xcassets in Resources */,
 				80AC16AB2450BA71002D1AC3 /* Main.storyboard in Resources */,
 			);
