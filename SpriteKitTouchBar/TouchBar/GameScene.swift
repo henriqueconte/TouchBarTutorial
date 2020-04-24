@@ -10,10 +10,11 @@ import Foundation
 import SpriteKit
 
 
-public class GameScene: SKScene {
+class GameScene: SKScene {
     
     var playerNode: Player?
     var backgroundNode: SKSpriteNode?
+    var updateTime: Double = 0
     
     var viewWidth: CGFloat {
         return view?.bounds.width ?? 0
@@ -23,10 +24,20 @@ public class GameScene: SKScene {
         return view?.bounds.height ?? 0
     }
     
-    public override func didMove(to view: SKView) {
+    override func didMove(to view: SKView) {
         setBackground()
         setPlayer()
         setKeyboardEvents()
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        let randomTime = Double.random(in: 0.8..<2)
+        
+        if currentTime - updateTime > randomTime {
+            updateTime = currentTime
+            spawnEnemie()
+        }
+        
     }
     
     func setBackground() {
@@ -69,6 +80,20 @@ public class GameScene: SKScene {
                 return event
             }
             return event
+        }
+    }
+    
+    func spawnEnemie() {
+        let enemy = Enemy(text: "🌖")
+        let enemyYPosition = CGFloat(Int.random(in: 0..<Int(viewHeight)))
+        let moveAction = SKAction.move(to: CGPoint(x: -10, y: enemyYPosition), duration: 2)
+        
+        enemy.position = CGPoint(x: viewWidth, y: enemyYPosition)
+        
+        addChild(enemy)
+        
+        enemy.run(moveAction) {
+            enemy.removeFromParent()
         }
     }
     

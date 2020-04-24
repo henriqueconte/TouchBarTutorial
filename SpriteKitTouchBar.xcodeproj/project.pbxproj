@@ -16,6 +16,7 @@
 		80DFBD732451FE0B000D52AA /* Game.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80DFBD722451FE0B000D52AA /* Game.sks */; };
 		80DFBD7624520DF1000D52AA /* KeyIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DFBD7524520DF1000D52AA /* KeyIdentifiers.swift */; };
 		80DFBD7824521237000D52AA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DFBD7724521237000D52AA /* Player.swift */; };
+		80DFBD7B245231B2000D52AA /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DFBD7A245231B2000D52AA /* Enemy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		80DFBD722451FE0B000D52AA /* Game.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Game.sks; sourceTree = "<group>"; };
 		80DFBD7524520DF1000D52AA /* KeyIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyIdentifiers.swift; sourceTree = "<group>"; };
 		80DFBD7724521237000D52AA /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		80DFBD7A245231B2000D52AA /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				80AC16B72450CFF0002D1AC3 /* GameScene.swift */,
 				80AC16B52450C01B002D1AC3 /* TouchBarView.swift */,
 				80DFBD7724521237000D52AA /* Player.swift */,
+				80DFBD7A245231B2000D52AA /* Enemy.swift */,
 			);
 			path = TouchBar;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DFBD7B245231B2000D52AA /* Enemy.swift in Sources */,
 				80AC16B62450C01B002D1AC3 /* TouchBarView.swift in Sources */,
 				80DFBD7624520DF1000D52AA /* KeyIdentifiers.swift in Sources */,
 				80AC16A62450BA6D002D1AC3 /* MacViewController.swift in Sources */,
