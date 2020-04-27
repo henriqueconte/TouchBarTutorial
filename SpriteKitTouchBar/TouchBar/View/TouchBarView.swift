@@ -13,17 +13,13 @@ import SpriteKit
 
 @available(OSX 10.12.2, *)
 class TouchBarView: NSViewController {
-
-    private lazy var gameView: SKView = {
-        let v = SKView(frame: self.view.bounds)
-        v.autoresizingMask = [.width, .height]
-        
-        return v
-    }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    private lazy var gameView: SKView = {
+        let view = SKView(frame: self.view.bounds)
+        view.autoresizingMask = [.width, .height]
+
+        return view
+    }()
     
     override func loadView() {
         view = NSView()
@@ -34,14 +30,10 @@ class TouchBarView: NSViewController {
         super.viewDidAppear()
         
         if gameView.scene == nil {
-            showStartScene()
+            let scene = SKScene(fileNamed: "StartScene") as? StartScene
+            scene!.scaleMode = .aspectFill
+            gameView.presentScene(scene)
         }
-    }
-    
-    func showStartScene() {
-        let scene = SKScene(fileNamed: "StartScene") as? StartScene
-        scene!.scaleMode = .aspectFill
-        gameView.presentScene(scene)
     }
     
 }

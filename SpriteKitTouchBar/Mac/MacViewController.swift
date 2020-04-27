@@ -117,17 +117,8 @@ import Cocoa
 import SpriteKit
 import GameplayKit
 
-//protocol TouchBarViewDelegate: class {
-//    
-//    func didMoveTo(_ locationX: Double) -> Bool
-//    
-//}
 
 class MacViewController: NSViewController {
-
-    @IBOutlet var skView: SKView!
-    
-    var gameScene: GameScene?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -139,48 +130,5 @@ class MacViewController: NSViewController {
         
         view.window!.styleMask.remove(NSWindow.StyleMask.resizable)
     }
-    
-    @objc func restartGame() {
-       // gameScene?.gameState = .new
-    }
-    
-//    @available(OSX 10.12.2, *)
-//    override func makeTouchBar() -> NSTouchBar? {
-//        let touchBar = NSTouchBar()
-//        touchBar.delegate = self
-//        touchBar.customizationIdentifier = .touchBar
-//        touchBar.defaultItemIdentifiers = [.touchEvent]
-//        touchBar.customizationAllowedItemIdentifiers = [.touchEvent]
-//        return touchBar
-//    }
-    
-}
 
-//@available(OSX 10.12.2, *)
-//extension MacViewController: NSTouchBarDelegate {
-//
-////    func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
-////        let touchBarView = TouchBarView()
-////        touchBarView.wantsLayer = true
-////        touchBarView.layer?.backgroundColor = NSColor.clear.cgColor
-////        touchBarView.allowedTouchTypes = .direct
-////
-////        //touchBarView.delegate = gameScene
-////
-////        let custom = NSCustomTouchBarItem(identifier: identifier)
-////        custom.view = touchBarView
-////
-////        return custom
-////    }
-//
-//}
-
-@available(OSX 10.12.2, *)
-fileprivate extension NSTouchBar.CustomizationIdentifier {
-    static let touchBar = NSTouchBar.CustomizationIdentifier("com.spriteKit.touchBar")
-}
-
-@available(OSX 10.12.2, *)
-fileprivate extension NSTouchBarItem.Identifier {
-    static let touchEvent = NSTouchBarItem.Identifier("com.spriteKit.touch")
 }
