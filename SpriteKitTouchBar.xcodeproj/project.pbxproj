@@ -9,12 +9,23 @@
 /* Begin PBXBuildFile section */
 		80175164245328EA00D8C85E /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80175163245328EA00D8C85E /* StartScene.swift */; };
 		8017516924533CBA00D8C85E /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8017516824533CBA00D8C85E /* StartScene.sks */; };
+		803CD2152463449D0056B269 /* TouchBarNewScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803CD2142463449D0056B269 /* TouchBarNewScene.swift */; };
+		803CD21724634A880056B269 /* NewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803CD21624634A880056B269 /* NewPlayer.swift */; };
 		80AC16A42450BA6D002D1AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */; };
 		80AC16A62450BA6D002D1AC3 /* MacViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A52450BA6D002D1AC3 /* MacViewController.swift */; };
 		80AC16A82450BA71002D1AC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AC16A72450BA71002D1AC3 /* Assets.xcassets */; };
 		80AC16AB2450BA71002D1AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AC16A92450BA71002D1AC3 /* Main.storyboard */; };
 		80AC16B62450C01B002D1AC3 /* TouchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16B52450C01B002D1AC3 /* TouchBarView.swift */; };
 		80AC16B92450D364002D1AC3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16B72450CFF0002D1AC3 /* GameScene.swift */; };
+		80D254D824634103003D5251 /* PixelCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D254D024634103003D5251 /* PixelCategory.swift */; };
+		80D254D924634103003D5251 /* MultiplierFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D254D124634103003D5251 /* MultiplierFactor.swift */; };
+		80D254DA24634103003D5251 /* PixelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D254D224634103003D5251 /* PixelNode.swift */; };
+		80D254DB24634103003D5251 /* MainCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D254D324634103003D5251 /* MainCharacter.swift */; };
+		80D254DC24634103003D5251 /* EndMenuTouchBarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D254D424634103003D5251 /* EndMenuTouchBarScene.swift */; };
+		80D254DD24634103003D5251 /* TouchBarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D254D524634103003D5251 /* TouchBarScene.swift */; };
+		80D254DE24634103003D5251 /* TouchBarIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D254D624634103003D5251 /* TouchBarIdentifiers.swift */; };
+		80D254DF24634103003D5251 /* TouchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D254D724634103003D5251 /* TouchBarViewController.swift */; };
+		80D254E124634145003D5251 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D254E024634145003D5251 /* Direction.swift */; };
 		80DFBD732451FE0B000D52AA /* Game.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80DFBD722451FE0B000D52AA /* Game.sks */; };
 		80DFBD7624520DF1000D52AA /* KeyIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DFBD7524520DF1000D52AA /* KeyIdentifiers.swift */; };
 		80DFBD7824521237000D52AA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DFBD7724521237000D52AA /* Player.swift */; };
@@ -25,6 +36,8 @@
 /* Begin PBXFileReference section */
 		80175163245328EA00D8C85E /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		8017516824533CBA00D8C85E /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		803CD2142463449D0056B269 /* TouchBarNewScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarNewScene.swift; sourceTree = "<group>"; };
+		803CD21624634A880056B269 /* NewPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayer.swift; sourceTree = "<group>"; };
 		80AC16A02450BA6D002D1AC3 /* SpriteKitTouchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitTouchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80AC16A52450BA6D002D1AC3 /* MacViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +47,15 @@
 		80AC16AD2450BA71002D1AC3 /* SpriteKitTouchBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpriteKitTouchBar.entitlements; sourceTree = "<group>"; };
 		80AC16B52450C01B002D1AC3 /* TouchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarView.swift; sourceTree = "<group>"; };
 		80AC16B72450CFF0002D1AC3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		80D254D024634103003D5251 /* PixelCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixelCategory.swift; sourceTree = "<group>"; };
+		80D254D124634103003D5251 /* MultiplierFactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplierFactor.swift; sourceTree = "<group>"; };
+		80D254D224634103003D5251 /* PixelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixelNode.swift; sourceTree = "<group>"; };
+		80D254D324634103003D5251 /* MainCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCharacter.swift; sourceTree = "<group>"; };
+		80D254D424634103003D5251 /* EndMenuTouchBarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndMenuTouchBarScene.swift; sourceTree = "<group>"; };
+		80D254D524634103003D5251 /* TouchBarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchBarScene.swift; sourceTree = "<group>"; };
+		80D254D624634103003D5251 /* TouchBarIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchBarIdentifiers.swift; sourceTree = "<group>"; };
+		80D254D724634103003D5251 /* TouchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchBarViewController.swift; sourceTree = "<group>"; };
+		80D254E024634145003D5251 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		80DFBD722451FE0B000D52AA /* Game.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Game.sks; sourceTree = "<group>"; };
 		80DFBD7524520DF1000D52AA /* KeyIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyIdentifiers.swift; sourceTree = "<group>"; };
 		80DFBD7724521237000D52AA /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -97,6 +119,7 @@
 		80AC16A22450BA6D002D1AC3 /* SpriteKitTouchBar */ = {
 			isa = PBXGroup;
 			children = (
+				80D254CD246340A3003D5251 /* Playground */,
 				80DFBD7424520DE6000D52AA /* Support */,
 				80AC16B42450C015002D1AC3 /* Mac */,
 				80AC16B32450C011002D1AC3 /* TouchBar */,
@@ -128,6 +151,40 @@
 				80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */,
 			);
 			path = Mac;
+			sourceTree = "<group>";
+		};
+		80D254CD246340A3003D5251 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				80D254CE24634103003D5251 /* TouchBar */,
+				803CD2142463449D0056B269 /* TouchBarNewScene.swift */,
+				803CD21624634A880056B269 /* NewPlayer.swift */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
+		80D254CE24634103003D5251 /* TouchBar */ = {
+			isa = PBXGroup;
+			children = (
+				80D254E024634145003D5251 /* Direction.swift */,
+				80D254CF24634103003D5251 /* Pixel */,
+				80D254D324634103003D5251 /* MainCharacter.swift */,
+				80D254D424634103003D5251 /* EndMenuTouchBarScene.swift */,
+				80D254D524634103003D5251 /* TouchBarScene.swift */,
+				80D254D624634103003D5251 /* TouchBarIdentifiers.swift */,
+				80D254D724634103003D5251 /* TouchBarViewController.swift */,
+			);
+			path = TouchBar;
+			sourceTree = "<group>";
+		};
+		80D254CF24634103003D5251 /* Pixel */ = {
+			isa = PBXGroup;
+			children = (
+				80D254D024634103003D5251 /* PixelCategory.swift */,
+				80D254D124634103003D5251 /* MultiplierFactor.swift */,
+				80D254D224634103003D5251 /* PixelNode.swift */,
+			);
+			path = Pixel;
 			sourceTree = "<group>";
 		};
 		80DFBD7424520DE6000D52AA /* Support */ = {
@@ -216,9 +273,20 @@
 				80DFBD7624520DF1000D52AA /* KeyIdentifiers.swift in Sources */,
 				80AC16A62450BA6D002D1AC3 /* MacViewController.swift in Sources */,
 				80AC16B92450D364002D1AC3 /* GameScene.swift in Sources */,
+				80D254DA24634103003D5251 /* PixelNode.swift in Sources */,
+				80D254D924634103003D5251 /* MultiplierFactor.swift in Sources */,
+				803CD2152463449D0056B269 /* TouchBarNewScene.swift in Sources */,
+				80D254E124634145003D5251 /* Direction.swift in Sources */,
+				803CD21724634A880056B269 /* NewPlayer.swift in Sources */,
+				80D254DE24634103003D5251 /* TouchBarIdentifiers.swift in Sources */,
 				80DFBD7824521237000D52AA /* Player.swift in Sources */,
+				80D254DD24634103003D5251 /* TouchBarScene.swift in Sources */,
+				80D254DB24634103003D5251 /* MainCharacter.swift in Sources */,
 				80AC16A42450BA6D002D1AC3 /* AppDelegate.swift in Sources */,
 				80175164245328EA00D8C85E /* StartScene.swift in Sources */,
+				80D254D824634103003D5251 /* PixelCategory.swift in Sources */,
+				80D254DF24634103003D5251 /* TouchBarViewController.swift in Sources */,
+				80D254DC24634103003D5251 /* EndMenuTouchBarScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
