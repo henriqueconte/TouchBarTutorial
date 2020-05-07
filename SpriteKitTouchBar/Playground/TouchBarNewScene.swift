@@ -29,6 +29,7 @@ class TouchBarNewScene: SKScene {
         backgroundNode = SKSpriteNode(texture: SKTexture(imageNamed: "caveBackground"), size: CGSize(width: self.view?.bounds.width ?? 0, height: self.view?.bounds.height ?? 0))
         backgroundNode?.zPosition = 0
         backgroundNode?.anchorPoint = CGPoint(x: 0, y: 0)
+        backgroundNode?.lightingBitMask = BitmaskConstants.affectedByLight
         
         addChild(backgroundNode!)
     }

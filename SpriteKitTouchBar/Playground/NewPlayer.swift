@@ -21,6 +21,7 @@ class NewPlayer: SKSpriteNode {
         super.init(texture: texture, color: color, size: size)
         self.name = "player"
         setDefaultPhysicsBody(from: self)
+        setLightNodes()
     }
     
     func moveRight() {
@@ -73,7 +74,6 @@ class NewPlayer: SKSpriteNode {
     
     func die(_ completion: @escaping () -> ()) {
         self.removeAllActions()
-//        isAlive = false
         
         let explosion = SKEmitterNode(fileNamed: "Explosion")!
         addChild(explosion)
@@ -107,6 +107,24 @@ class NewPlayer: SKSpriteNode {
     private func setNewPosition(newPoint: CGPoint, duration: TimeInterval) {
         let moveAction = SKAction.move(to: newPoint, duration: duration)
         self.run(moveAction)
+    }
+    
+    private func setLightNodes() {
+        for _ in 0..<2 {
+            let lightNode = SKLightNode()
+
+            lightNode.position = self.position
+            lightNode.ambientColor = .clear
+            lightNode.lightColor = .white
+            lightNode.falloff = 0
+            lightNode.zPosition = 1
+            lightNode.physicsBody?.categoryBitMask = BitmaskConstants.affectedByLight
+            
+            self.physicsBody?.categoryBitMask = BitmaskConstants.affectedByLight
+            
+            
+            addChild(lightNode)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
