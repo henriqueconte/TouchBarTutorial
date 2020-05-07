@@ -12,6 +12,8 @@
 		803CD2152463449D0056B269 /* TouchBarNewScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803CD2142463449D0056B269 /* TouchBarNewScene.swift */; };
 		803CD21724634A880056B269 /* NewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803CD21624634A880056B269 /* NewPlayer.swift */; };
 		803CD21924648CA00056B269 /* BitmaskConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803CD21824648CA00056B269 /* BitmaskConstants.swift */; };
+		803CD21B246496100056B269 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803CD21A246496100056B269 /* Coffee.swift */; };
+		803CD21D2464A1200056B269 /* PuzzleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803CD21C2464A1200056B269 /* PuzzleState.swift */; };
 		80AC16A42450BA6D002D1AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */; };
 		80AC16A62450BA6D002D1AC3 /* MacViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC16A52450BA6D002D1AC3 /* MacViewController.swift */; };
 		80AC16A82450BA71002D1AC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AC16A72450BA71002D1AC3 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		803CD2142463449D0056B269 /* TouchBarNewScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarNewScene.swift; sourceTree = "<group>"; };
 		803CD21624634A880056B269 /* NewPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayer.swift; sourceTree = "<group>"; };
 		803CD21824648CA00056B269 /* BitmaskConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmaskConstants.swift; sourceTree = "<group>"; };
+		803CD21A246496100056B269 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		803CD21C2464A1200056B269 /* PuzzleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleState.swift; sourceTree = "<group>"; };
 		80AC16A02450BA6D002D1AC3 /* SpriteKitTouchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitTouchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AC16A32450BA6D002D1AC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80AC16A52450BA6D002D1AC3 /* MacViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				80D254CE24634103003D5251 /* TouchBar */,
 				803CD2142463449D0056B269 /* TouchBarNewScene.swift */,
 				803CD21624634A880056B269 /* NewPlayer.swift */,
+				803CD21A246496100056B269 /* Coffee.swift */,
+				803CD21C2464A1200056B269 /* PuzzleState.swift */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
@@ -290,7 +296,9 @@
 				80D254D824634103003D5251 /* PixelCategory.swift in Sources */,
 				803CD21924648CA00056B269 /* BitmaskConstants.swift in Sources */,
 				80D254DF24634103003D5251 /* TouchBarViewController.swift in Sources */,
+				803CD21D2464A1200056B269 /* PuzzleState.swift in Sources */,
 				80D254DC24634103003D5251 /* EndMenuTouchBarScene.swift in Sources */,
+				803CD21B246496100056B269 /* Coffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

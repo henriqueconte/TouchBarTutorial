@@ -15,7 +15,7 @@ class NewPlayer: SKSpriteNode {
     
     private var leftAssetCount: Int = 1
     private var rightAssetCount: Int = 1
-    
+    private var lightNodes: [SKLightNode] = []
     
     override init(texture: SKTexture!, color: NSColor, size: CGSize) {
         super.init(texture: texture, color: color, size: size)
@@ -72,26 +72,6 @@ class NewPlayer: SKSpriteNode {
         return shootNode
     }
     
-    func die(_ completion: @escaping () -> ()) {
-        self.removeAllActions()
-        
-        let explosion = SKEmitterNode(fileNamed: "Explosion")!
-        addChild(explosion)
-        explosion.resetSimulation()
-        explosion.particleTexture = SKTexture(imageNamed: "Bloob")
-        explosion.position = CGPoint(x: self.position.x, y: self.position.y)
-        explosion.particleSize = CGSize(width: 15, height: 15)
-        explosion.speed = 0.5
-        
-        let fadeOut = SKAction.fadeOut(withDuration: 1.0)
-
-        self.run(fadeOut) {
-            explosion.removeFromParent()
-            self.removeFromParent()
-            completion()
-        }
-    }
-    
     private func setDefaultPhysicsBody(from node: SKNode) {
         let physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: node.frame.width * 0.5,
                                                             height: node.frame.height * 0.5)
@@ -122,7 +102,7 @@ class NewPlayer: SKSpriteNode {
             
             self.physicsBody?.categoryBitMask = BitmaskConstants.affectedByLight
             
-            
+            lightNodes.append(lightNode)
             addChild(lightNode)
         }
     }
